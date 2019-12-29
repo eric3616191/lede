@@ -1,0 +1,195 @@
+
+config network
+	option init 'network'
+	list affects 'dhcp'
+	list affects 'radvd'
+
+config wireless
+	list affects 'network'
+
+config firewall
+	option init 'firewall'
+	list affects 'luci-splash'
+	list affects 'qos'
+	list affects 'miniupnpd'
+	list affects 'sqm'
+
+config olsr
+	option init 'olsrd'
+
+config dhcp
+	option init 'dnsmasq'
+	list affects 'odhcpd'
+
+config odhcpd
+	option init 'odhcpd'
+
+config dropbear
+	option init 'dropbear'
+
+config httpd
+	option init 'httpd'
+
+config fstab
+	option init 'fstab'
+
+config qos
+	option init 'qos'
+
+config system
+	option init 'led'
+	list affects 'luci_statistics'
+	list affects 'dhcp'
+
+config cron
+	option init 'cron'
+
+config luci_splash
+	option init 'luci_splash'
+
+config ntpclient
+	option init 'ntpclient'
+
+config samba
+	option init 'samba'
+
+config tinyproxy
+	option init 'tinyproxy'
+
+config aria2
+	option init 'aria2'
+
+config minidlna 'minidlna'
+
+config upnpd
+	option init 'miniupnpd'
+
+config nlbwmon
+	option init 'nlbwmon'
+
+config luci_statistics
+	option init 'luci_statistics'
+
+config transmission
+	option init 'transmission'
+
+config vnstat
+	option init 'vnstat'
+
+config system
+	option init 'watchcat'
+
+config zerotier
+	option init 'zerotier'
+
+config mwan3
+	option exec '/etc/init.d/mwan3 reload'
+
+config adbyby
+	option init 'adbyby'
+
+config dockerd
+	option init 'dockerd'
+
+config familycloud
+	option init 'familycloud'
+
+config flowoffload
+	option init 'flowoffload'
+
+config ipsec
+	option init 'ipsec'
+
+config amule
+	option init 'amule'
+
+config brook_server
+	option init 'brook_server'
+
+config filebrowser
+	option init 'filebrowser'
+
+config kodexplorer
+	option init 'kodexplorer'
+
+config passwall
+	option init 'passwall'
+
+config pppoe-server
+	option init 'pppoe-server'
+
+config softethervpn
+	option init 'softethervpn'
+
+config ssr_libev_server
+	option init 'ssr_libev_server'
+
+config ssr_python_pro_server
+	option init 'ssr_python_pro_server'
+
+config trojan_server
+	option init 'trojan_server'
+
+config v2ray_server
+	option init 'v2ray_server'
+
+config vlmcsd
+	option init 'kms'
+
+config arpbind
+	option init 'arpbind'
+
+config baidupcs-web
+	option init 'baidupcs-web'
+
+config frp
+	option init 'frp'
+
+config koolproxy
+	option init 'koolproxy'
+
+config n2n_v2
+	option init 'n2n_v2'
+
+config qbittorrent
+	option init 'qbittorrent'
+
+config sqm
+	option init 'sqm'
+
+config shadowsocksr
+	option init 'shadowsocksr'
+
+config syncdial
+	option exec '/bin/genwancfg'
+
+config syncthing
+	option exec '/etc/init.d/syncthing restart'
+
+config usb_printer
+	option init 'usb_printer'
+
+config verysync
+	option exec '/etc/init.d/verysync restart'
+
+config vsftpd
+	option init 'vsftpd'
+
+config xlnetacc
+	option init 'xlnetacc'
+
+config mia
+	option init 'mia'
+
+config mwan3helper
+	option init 'mwan3helper'
+
+config pptpd
+	option init 'pptpd'
+
+config unblockmusic
+	option init 'unblockmusic'
+
+config smartdns
+	option init 'smartdns'
+

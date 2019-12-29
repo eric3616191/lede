@@ -1,0 +1,265 @@
+
+config dnsmasq
+	option domainneeded '1'
+	option localise_queries '1'
+	option local '/lan/'
+	option domain 'lan'
+	option expandhosts '1'
+	option authoritative '1'
+	option readethers '1'
+	option leasefile '/tmp/dhcp.leases'
+	option resolvfile '/tmp/resolv.conf.auto'
+	option nonwildcard '1'
+	option localservice '1'
+	list server '127.0.0.1#5333'
+	option rebind_protection '0'
+
+config dhcp 'lan'
+	option interface 'lan'
+	option start '100'
+	option leasetime '12h'
+	option ra 'server'
+	option dhcpv6 'server'
+	option ra_management '1'
+	option ra_default '1'
+	option limit '90'
+
+config dhcp 'wan'
+	option interface 'wan'
+	option ignore '1'
+
+config srvhost
+	option srv '_vlmcs._tcp'
+	option target 'OpenWrt'
+	option port '1688'
+	option class '0'
+	option weight '100'
+
+config host
+	option name 'rm3'
+	option dns '1'
+	option mac 'b4:43:0d:38:65:a5'
+	option ip '192.168.120.249'
+
+config host
+	option name 'pc'
+	option dns '1'
+	option mac 'bc:ee:7b:09:ec:43'
+	option ip '192.168.120.88'
+
+config host
+	option name 'cwkt'
+	option dns '1'
+	option mac '34:ce:00:85:83:3e'
+	option ip '192.168.120.82'
+
+config host
+	option name 'zwkt'
+	option dns '1'
+	option mac '34:ce:00:85:93:90'
+	option ip '192.168.120.81'
+
+config host
+	option name 'sfkt'
+	option dns '1'
+	option mac '7c:49:eb:1a:bb:55'
+	option ip '192.168.120.80'
+
+config host
+	option name 'jhq'
+	option dns '1'
+	option mac '78:11:dc:48:8b:0b'
+	option ip '192.168.120.74'
+
+config host
+	option name 'saodi'
+	option dns '1'
+	option mac '7c:49:eb:96:01:16'
+	option ip '192.168.120.73'
+
+config host
+	option name 'zongdianliu'
+	option dns '1'
+	option mac 'dc:4f:22:4c:85:6c'
+	option ip '192.168.120.72'
+
+config host
+	option name 'kfpir'
+	option dns '1'
+	option mac '2c:3a:e8:43:83:d8'
+	option ip '192.168.120.71'
+
+config host
+	option name 'ktpir1'
+	option dns '1'
+	option mac '60:01:94:3c:c4:54'
+	option ip '192.168.120.70'
+
+config host
+	option name 'xiaomiwangguan'
+	option dns '1'
+	option mac '28:6c:07:88:b2:0f'
+	option ip '192.168.120.61'
+
+config host
+	option name 'xiaofang'
+	option dns '1'
+	option mac '5c:ff:ff:9e:49:6e'
+	option ip '192.168.120.59'
+
+config host
+	option name 'mitv'
+	option dns '1'
+	option mac '00:9e:c8:33:ba:ce'
+	option ip '192.168.120.58'
+
+config host
+	option name 'tv'
+	option dns '1'
+	option mac '0c:89:10:94:94:79'
+	option ip '192.168.120.57'
+
+config host
+	option name 'taideng'
+	option dns '1'
+	option mac '28:6c:07:26:cc:4e'
+	option ip '192.168.120.56'
+
+config host
+	option name 'ipad'
+	option dns '1'
+	option ip '192.168.120.55'
+	option mac '34:A8:EB:5C:7D:C2'
+
+config host
+	option name 'qnap1'
+	option dns '1'
+	option mac '54:75:d0:d5:6e:9e'
+	option ip '192.168.120.43'
+
+config host
+	option name 'dsm918'
+	option dns '1'
+	option mac '00:11:32:85:57:14'
+	option ip '192.168.120.42'
+
+config host
+	option name 'wk1'
+	option dns '1'
+	option mac '00:22:6d:5a:c9:9b'
+	option ip '192.168.120.10'
+
+config host
+	option name 'wk2'
+	option dns '1'
+	option mac '00:22:6d:4d:34:dd'
+	option ip '192.168.120.9'
+
+config host
+	option name 'zqb1'
+	option dns '1'
+	option mac 'b0:d5:9d:62:8f:5b'
+	option ip '192.168.120.8'
+
+config host
+	option name 'zqb2'
+	option dns '1'
+	option mac 'b0:d5:9d:62:8d:86'
+	option ip '192.168.120.7'
+
+config host
+	option name 'hassio'
+	option dns '1'
+	option mac '5e:af:f9:e6:23:53'
+	option ip '192.168.120.2'
+
+config host
+	option name 'shitou'
+	option dns '1'
+	option mac '00:22:6c:12:23:1b'
+	option ip '192.168.120.212'
+
+config host
+	option name 'qnap2'
+	option dns '1'
+	option mac '54:75:d0:d5:6e:9f'
+	option ip '192.168.120.41'
+
+config host
+	option name 'dafang'
+	option dns '1'
+	option mac '78:11:dc:43:d2:ae'
+	option ip '192.168.120.54'
+
+config host
+	option name 'cantpri'
+	option dns '1'
+	option mac '60:01:94:41:28:CF'
+	option ip '192.168.120.63'
+
+config host
+	option name 'chufangtrq'
+	option dns '1'
+	option mac '2C:3A:E8:01:1F:8B	'
+	option ip '192.168.120.64'
+
+config host
+	option name 'DSM3617'
+	option dns '1'
+	option mac '00:11:32:88:B0:01'
+	option ip '192.168.120.44'
+
+config host
+	option name '1xx'
+	option dns '1'
+	option mac '40:31:3C:EC:12:24'
+	option ip '192.168.120.75'
+
+config host
+	option name 'esp32wg'
+	option dns '1'
+	option mac '24:6F:28:DB:7E:48'
+	option ip '192.168.120.76'
+
+config host
+	option name 'sonoff501'
+	option dns '1'
+	option mac '60:01:94:2D:A8:49'
+	option ip '192.168.120.68'
+
+config host
+	option dns '1'
+	option mac 'A4:CF:12:B7:E6:2C'
+	option name 'CWMQTTIR'
+	option ip '192.168.120.51'
+
+config host
+	option dns '1'
+	option mac 'BC:DD:C2:48:8E:7C'
+	option ip '192.168.120.53'
+	option name 'ZWMQTTIR'
+
+config host
+	option name 'KTMQTTIR'
+	option dns '1'
+	option mac 'BC:DD:C2:48:88:7E'
+	option ip '192.168.120.52'
+
+config host
+	option name 'ACpor'
+	option dns '1'
+	option mac 'FC:EC:DA:F6:E1:11'
+	option ip '192.168.120.39'
+
+config host
+	option name 'ACLR'
+	option dns '1'
+	option mac 'FC:EC:DA:A6:DB:DE'
+	option ip '192.168.120.40'
+
+config host
+	option name 'pisen'
+	option dns '1'
+	option mac '3c:40:4f:09:6c:4d'
+	option ip '192.168.120.84'
+

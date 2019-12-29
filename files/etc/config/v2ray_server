@@ -1,0 +1,15 @@
+
+config global
+	option enable '0'
+
+config user
+	option protocol 'vmess'
+	option VMess_level '1'
+	option transport 'tcp'
+	option tcp_guise 'none'
+	option port '64685'
+	option VMess_id '337dbe54-0afc-4e14-8d95-25b3f9c0dcd6'
+	option VMess_alterId '233'
+	option enable '0'
+	option remarks 'home'
+
